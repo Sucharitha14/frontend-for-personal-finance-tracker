@@ -1,18 +1,25 @@
 # Personal Finance Tracker REST API
 
-A backend REST API built with Flask that allows users to manage personal financial transactions securely using JWT authentication.
+A backend REST API built using Flask that allows users to manage their personal finances by tracking income and expenses securely using JWT authentication.
 
 ## Features
 
-- User Registration
-- User Login with JWT Authentication
-- Protected API Routes
-- Add Income / Expense Transactions
-- View User Transactions
-- Delete Transactions
-- Financial Summary (Balance, Income, Expense)
+User Authentication
+- Register new users
+- Login with JWT token authentication
+- Secure protected routes
 
-## Tech Stack
+Transaction Management
+- Add income or expense transactions
+- View all user-specific transactions
+- Delete transactions
+
+Financial Summary
+- Calculate total income
+- Calculate total expenses
+- Show current balance
+
+## Technologies Used
 
 - Python
 - Flask
@@ -20,10 +27,11 @@ A backend REST API built with Flask that allows users to manage personal financi
 - Flask-SQLAlchemy
 - SQLite
 - REST API
+- Git & GitHub
 
 ## Project Structure
 
-finance_tracker/
+finance_tracker
 │
 ├── app.py
 ├── config.py
@@ -31,53 +39,53 @@ finance_tracker/
 ├── models.py
 ├── init_db.py
 │
-├── routes/
+├── routes
 │   ├── auth_routes.py
 │   └── transaction_routes.py
 │
-├── requirements.txt
-└── README.md
+└── instance
+    └── finance.db
 
 ## API Endpoints
 
-### Authentication
+Authentication
+- POST /api/register
+- POST /api/login
 
-POST /api/register  
-Register a new user.
+Transactions
+- POST /api/transactions
+- GET /api/transactions
+- DELETE /api/transactions/<id>
 
-POST /api/login  
-Login and receive JWT token.
+Summary
+- GET /api/summary
 
-### Transactions
+## How to Run the Project
 
-POST /api/transactions  
-Add a new transaction.
+1. Clone the repository
 
-GET /api/transactions  
-Get all user transactions.
+git clone https://github.com/Sucharitha14/personal-finance-tracker-api.git
 
-DELETE /api/transactions/<id>  
-Delete a transaction.
+2. Navigate into the project
 
-### Financial Summary
+cd personal-finance-tracker-api
 
-GET /api/summary  
-Get balance, income, and expense summary.
+3. Create virtual environment
 
-## Installation
+python -m venv venv
 
-Clone the repository:
+4. Activate environment
 
-git clone <repo_link>
+Windows:
+venv\Scripts\activate
 
-Install dependencies:
+5. Install dependencies
 
 pip install -r requirements.txt
 
-Run the application:
+6. Run the application
 
 python app.py
 
 Server will start at:
-
 http://127.0.0.1:5000
