@@ -1,89 +1,125 @@
-# Personal Finance Tracker REST API
+# Personal Finance Tracker – Frontend
 
-A backend REST API built using Flask that allows users to manage their personal finances by tracking income and expenses securely using JWT authentication.
+This repository contains the **frontend interface** for the Personal Finance Tracker application.
+It allows users to **register, log in, and manage their financial transactions** through a simple web dashboard.
+
+The frontend communicates with the backend API built using **Flask**.
+
+---
 
 ## Features
 
-User Authentication
-- Register new users
-- Login with JWT token authentication
-- Secure protected routes
+* User Registration
+* User Login
+* Dashboard to view transactions
+* Add new transactions
+* Delete transactions
+* Simple and clean UI
 
-Transaction Management
-- Add income or expense transactions
-- View all user-specific transactions
-- Delete transactions
+---
 
-Financial Summary
-- Calculate total income
-- Calculate total expenses
-- Show current balance
+## Tech Stack
 
-## Technologies Used
+* HTML
+* CSS
+* JavaScript
+* REST API (Flask backend)
 
-- Python
-- Flask
-- Flask-JWT-Extended
-- Flask-SQLAlchemy
-- SQLite
-- REST API
-- Git & GitHub
+---
 
 ## Project Structure
 
-finance_tracker
+```
+frontend-for-personal-finance-tracker
 │
-├── app.py
-├── config.py
-├── extensions.py
-├── models.py
-├── init_db.py
+├── login.html
+├── register.html
+├── dashboard.html
 │
-├── routes
-│   ├── auth_routes.py
-│   └── transaction_routes.py
+├── css/
+│   └── styles.css
 │
-└── instance
-    └── finance.db
+└── js/
+    └── app.js
+```
 
-## API Endpoints
+---
 
-Authentication
-- POST /api/register
-- POST /api/login
-
-Transactions
-- POST /api/transactions
-- GET /api/transactions
-- DELETE /api/transactions/<id>
-
-Summary
-- GET /api/summary
-
-## How to Run the Project
+## How to Run the Frontend
 
 1. Clone the repository
 
-git clone https://github.com/Sucharitha14/personal-finance-tracker-api.git
+```
+git clone https://github.com/YOUR-USERNAME/frontend-for-personal-finance-tracker.git
+```
 
-2. Navigate into the project
+2. Navigate into the project folder
 
-cd personal-finance-tracker-api
+```
+cd frontend-for-personal-finance-tracker
+```
 
-3. Create virtual environment
+3. Open `login.html` in your browser.
 
-python -m venv venv
+Make sure the **backend API is running** locally.
 
-4. Activate environment
+Example backend API:
 
-Windows:
-venv\Scripts\activate
+```
+http://127.0.0.1:5000
+```
 
-5. Install dependencies
+---
 
-pip install -r requirements.txt
+## Backend Repository
 
-6. Run the application
+The backend API for this project is available here:
+
+```
+personal-finance-tracker-api
+```
+
+It is built with:
+
+* Flask
+* SQLAlchemy
+* SQLite
+* REST API architecture
+
+---
+
+## Screenshots
+
+You can add screenshots here after running the project.
+
+Example:
+
+```
+Login Page
+Dashboard
+Transaction List
+```
+
+---
+
+## Future Improvements
+
+* Responsive design
+* Data visualization (charts for spending)
+* Edit transactions
+* Category filtering
+* Dark mode
+
+---
+
+## Author
+
+Created as a **full-stack portfolio project** to practice:
+
+* REST API development
+* Frontend integration
+* Authentication workflows
+* Git & GitHub project management
 
 python app.py
 
